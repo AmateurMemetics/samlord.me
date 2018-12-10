@@ -1,0 +1,152 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i');
+
+/* Default Styles */
+
+:root {
+  --primary-color: #222;
+  --secondary-color: #666;
+  --accent-color-rgb: 94, 94, 93;
+  --background-color: #F0F0F0;
+  
+  --nav-height: 3.5rem;
+}
+
+html {
+  font-size: 18px;
+  /* enable instant clicks */
+  touch-action: manipulation;
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  font-family: 'PT Serif', serif;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin: 0;
+  padding-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1em;
+}
+
+hr {
+  width: 40%;
+}
+
+ul {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+blockquote {
+  font-style: italic;
+  text-align: justify;
+  margin: 4em 0;
+  padding: 0 2em;
+  position: relative;
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 2.2em;
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+
+blockquote p {
+  margin: 1.2em 0 0.8em;
+}
+
+blockquote footer {
+  font-style: normal;
+  text-align: right;
+  font-size: 0.9em;
+}
+
+a {
+  color: var(--secondary-color);
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+}
+a:visited {
+  color: var(--secondary-color);
+}
+a:hover {
+  text-decoration: underline;
+}
+
+article {
+  --base-margin: 1.5rem;
+  box-sizing: border-box;
+  padding: 0 2rem;
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+}
+
+/* Article Vertical Spacing */
+article > * + * {
+  margin-top: var(--base-margin);
+}
+article > h2 + * {
+  margin-top: calc(var(--base-margin) * 0.5);
+}
+article > h3 + * {
+  margin-top: calc(var(--base-margin) * 0.333);
+}
+article > * + hr {
+  margin-top: calc(var(--base-margin) * 1.666);
+}
+article > figure + * {
+  margin-top: calc(var(--base-margin) * 2);
+}
+article > blockquote + * {
+  margin-top: calc(var(--base-margin) * 1.666);
+}
+article > * + h2 {
+  margin-top: calc(var(--base-margin) * 3);
+}
+article > * + h3 {
+  margin-top: calc(var(--base-margin) * 1.666);
+}
+article > * + figure {
+  margin-top: calc(var(--base-margin) * 2);
+}
+article > * + blockquote {
+  margin-top: calc(var(--base-margin) * 1.666);
+}
+article > h2 + h3 {
+  margin-top: calc(var(--base-margin) * 1.333);
+}
+article > h2 + figure {
+  margin-top: calc(var(--base-margin) * 0.833);
+}
+article > figure + figure {
+  margin-top: calc(var(--base-margin) * 1.333);
+}

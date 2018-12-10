@@ -1,0 +1,13 @@
+<p>{count}</p>
+<button on:click="set({count: count + 1})">+1</button>
+<button on:click="set({count: count - 1})">-1</button>
+
+<script>
+export default {
+	data() {
+		return {
+			count: 0
+		}
+	}
+}
+</script>

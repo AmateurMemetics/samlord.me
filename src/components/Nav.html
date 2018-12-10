@@ -1,0 +1,72 @@
+<nav>
+  <a class='{segment === undefined ? "selected" : ""}' href='.'>home</a>
+  <a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a>
+  <a class='end {segment === "about" ? "selected" : ""}' href='about'><span style="margin-right: 0.8em;">about</span> <Photo src="/me.jpg" alt="Sam Lord" /></a>
+</nav>
+
+<style>
+  @media (max-width: 800px) {
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+	nav {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    background-color: var(--background-color);
+    top: 0;
+    left: 0;
+		border-bottom: 1px solid rgba(var(--accent-color-rgb), 0.1);
+    font-size: 1.2em;
+		font-weight: 300;
+    width: 100%;
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: start;
+    box-sizing: border-box;
+    line-height: var(--nav-height);
+    height: var(--nav-height);
+	}
+
+  nav > .end {
+    margin-left: auto;
+  }
+
+	.selected {
+		position: relative;
+	}
+
+	.selected::after {
+		position: absolute;
+		content: '';
+		width: calc(100% - 1.6em);
+		height: 2px;
+		background-color: var(--primary-color);
+		display: block;
+		bottom: -1px;
+	}
+
+	a {
+    color: var(--primary-color);
+		text-decoration: none;
+		padding: 0.5em 0.8em;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100%;
+	}
+</style>
+
+<script>
+export default {
+  components: {
+    Photo: './Photo.html'
+  }
+}
+</script>

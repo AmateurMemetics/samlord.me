@@ -1,0 +1,41 @@
+<img src="{src}" alt="{alt}" class:spin class:spinning draggable="false" on:click="fire('spin')">
+
+<style>
+  img {
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-height: 100%;
+    max-width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 1s ease-in-out;
+  }
+
+  img.spin {
+    transform: rotate(360deg);
+  }
+</style>
+
+<script>
+  export default {
+    oncreate() {
+      this.on('spin', () => {
+        this.set({
+          spin: !this.get().spin
+        })
+      })
+    },
+
+    data() {
+      return {
+        spinning: false,
+        spin: false
+      }
+    }
+  }
+</script>
