@@ -3,7 +3,7 @@
 	"theme_color": "#222222",
 	"name": "Sam Lord's Blog",
 	"short_name": "samlord.me",
-	"display": "minimal-ui",
+	"display": "standalone",
 	"start_url": "/blog",
 	"icons": [
 		{
