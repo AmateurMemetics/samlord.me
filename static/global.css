@@ -29,7 +29,8 @@ body {
   margin: 0;
   background-color: var(--background-color);
   color: var(--primary-color);
-  font-family: 'PT Serif', serif;
+  font-family: 'PT Serif', Garamond, Baskerville, Baskerville Old Face, Hoefler Text, Times New Roman, serif;
+  font-display: fallback;
 }
 
 h1 {

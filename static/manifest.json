@@ -1,14 +1,14 @@
 {
-	"background_color": "#ffffff",
-	"theme_color": "#000000",
-	"name": "TODO",
-	"short_name": "TODO",
+	"background_color": "#F0F0F0",
+	"theme_color": "#222222",
+	"name": "Sam Lord's Blog",
+	"short_name": "samlord.me",
 	"display": "minimal-ui",
-	"start_url": "/",
+	"start_url": "/blog",
 	"icons": [
 		{
-			"src": "favicon.png",
-			"sizes": "64x64",
+			"src": "samlord-logo-512.png",
+			"sizes": "512x512",
 			"type": "image/png"
 		}
 	]
